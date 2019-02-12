@@ -31,9 +31,9 @@ This is only if you're looking to get into the nitty gritty of the code powering
     - Run `npm i`.
 1.  Build a local deployment of the site.
     - Using the terminal, navigate to the repository's root directory.
-    - Run `gulp build_all`.
+    - Run `gulp watch`.
     - Observe as a local instance of site is launched in your default browser. For ease of development, "hot-reload" is built-in such that saving any changes will trigger the browser to update automatically.
-1.  Synchronize any changes made to your local by pushing your commits to the master branch of the remote origin. The site will update with the latest changes automatically within 10 minutes.
+1.  Synchronize any changes made to your local by pushing your commits to the master branch of the remote origin. The site will update with the latest changes automatically within 5 minutes.
 
 ## License
 
