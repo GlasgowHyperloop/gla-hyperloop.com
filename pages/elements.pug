@@ -1,0 +1,339 @@
+extends /_boilerplate.pug
+
+block page_meta
+  - var page_name = "Design Elements"
+  - var page_description = "This page contains a living exhibition of all the elements available within this design template."
+  - var page_keywords = "the voyaga, template, design, elements"
+
+
+block page_body
+  // Wrapper
+  #wrapper
+    // Header
+    section#header
+      // Logo
+      a.logo(href='https://design.voya.ga')
+        strong Designed with 💻, ☕ and 💗 by The Voyaga
+      // Nav
+      nav#nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a.icon.fa-angle-down(href='#!') Dropdown
+            ul
+              li
+                a(href='#!') Option One
+              li
+                a(href='#!') Option Two
+              li
+                a(href='#!') Option Three
+              li
+                a(href='#!') Submenu
+                ul
+                  li
+                    a(href='#!') Option One
+                  li
+                    a(href='#!') Option Two
+                  li
+                    a(href='#!') Option Three
+                  li
+                    a(href='#!') Option Four
+          li.current
+            a(href='/elements.html') Elements
+    // Section
+    section.wrapper.style1
+      .inner
+        header.major.special
+          h1 Elements
+          p
+            | Praesent dapibus neque id cursus faucibus consequat
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;magna consequat erat ipsum
+        .row.gtr-200
+          .col-6.col-12-medium
+            // Text stuff
+            h3 Text
+            p
+              | This is 
+              b bold
+              |  and this is 
+              strong strong
+              | . This is 
+              i italic
+              |  and this is 
+              em emphasized
+              | .
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;This is 
+              sup superscript
+              |  text and this is 
+              sub subscript
+              |  text.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;This is 
+              u underlined
+              |  and this is code: 
+              code for (;;) { ... }
+              | .
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Finally, this is a 
+              a(href='#!') link
+              | .
+            hr
+            h2 Heading Level 2
+            h3 Heading Level 3
+            h4 Heading Level 4
+            h5 Heading Level 5
+            h6 Heading Level 6
+            hr
+            // Lists
+            h3 Lists
+            .row
+              .col-6.col-12-small
+                h4 Unordered
+                ul
+                  li Amet dolor etiam.
+                  li Sagittis et lorem.
+                  li Felis sed viverra.
+                  li Dolor amet etiam.
+                h4 Alternate
+                ul.alt
+                  li Dolor pulvinar etiam.
+                  li Sagittis lorem eleifend.
+                  li Felis enim dolore viverra.
+                  li Dolor pulvinar etiam.
+              .col-6.col-12-small
+                h4 Ordered
+                ol
+                  li Sed pulvinar etiam.
+                  li Etiam vel viverra.
+                  li Felis feugiat magna.
+                  li Vel enim tempus.
+                h4 Icons
+                ul.icons
+                  li
+                    a.icon.fa-twitter(href='#!')
+                      span.label Twitter
+                  li
+                    a.icon.fa-facebook(href='#!')
+                      span.label Facebook
+                  li
+                    a.icon.fa-instagram(href='#!')
+                      span.label Instagram
+                  li
+                    a.icon.fa-github(href='#!')
+                      span.label Github
+            h4 Definition
+            dl
+              dt One
+              dd
+                p
+                  | Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+              dt Two
+              dd
+                p
+                  | Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+              dt Three
+              dd
+                p
+                  | Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+            h4 Actions
+            ul.actions
+              li
+                a.button.primary(href='#!') Primary
+              li
+                a.button(href='#!') Default
+            ul.actions.small
+              li
+                a.button.primary.small(href='#!') Small
+              li
+                a.button.small(href='#!') Small
+            .row
+              .col-6.col-12-small
+                ul.actions.stacked
+                  li
+                    a.button.primary(href='#!') Default
+                  li
+                    a.button(href='#!') Default
+              .col-6.col-12-small
+                ul.actions.stacked
+                  li
+                    a.button.primary.small(href='#!') Small
+                  li
+                    a.button.small(href='#!') Small
+            .row
+              .col-6.col-12-small
+                ul.actions.stacked
+                  li
+                    a.button.primary.fit(href='#!') Default
+                  li
+                    a.button.fit(href='#!') Default
+              .col-6.col-12-small
+                ul.actions.stacked
+                  li
+                    a.button.primary.small.fit(href='#!') Small
+                  li
+                    a.button.small.fit(href='#!') Small
+            hr
+            // Blockquote
+            h3 Blockquote
+            blockquote
+              | Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis.
+          .col-6.col-12-medium
+            // Buttons
+            h3 Buttons
+            ul.actions
+              li
+                a.button.primary(href='#!') Primary
+              li
+                a.button(href='#!') Default
+            ul.actions
+              li
+                a.button.primary.large(href='#!') Large
+              li
+                a.button(href='#!') Default
+              li
+                a.button.small(href='#!') Small
+            ul.actions.fit
+              li
+                a.button.primary.fit(href='#!') Fit
+              li
+                a.button.fit(href='#!') Fit
+            ul.actions.fit.small
+              li
+                a.button.primary.fit.small(href='#!') Fit + Small
+              li
+                a.button.fit.small(href='#!') Fit + Small
+            ul.actions
+              li
+                a.button.primary.icon.fa-search(href='#!') Icon
+              li
+                a.button.icon.fa-download(href='#!') Icon
+            ul.actions
+              li
+                span.button.primary.disabled Default
+              li
+                span.button.disabled Primary
+            hr
+            // Form
+            h3 Form
+            form.alt(method='post', action='#!')
+              .row.gtr-uniform
+                .col-6.col-12-xsmall
+                  input#demo-name(type='text', name='demo-name', value='', placeholder='Name')
+                .col-6.col-12-xsmall
+                  input#demo-email(type='email', name='demo-email', value='', placeholder='Email')
+                // Break
+                .col-12
+                  select#demo-category(name='demo-category')
+                    option(value='') - Category -
+                    option(value='1') Manufacturing
+                    option(value='1') Shipping
+                    option(value='1') Administration
+                    option(value='1') Human Resources
+                // Break
+                .col-4.col-12-small
+                  input#demo-priority-low(type='radio', name='demo-priority', checked='')
+                  label(for='demo-priority-low') Low
+                .col-4.col-12-small
+                  input#demo-priority-normal(type='radio', name='demo-priority')
+                  label(for='demo-priority-normal') Normal
+                .col-4.col-12-small
+                  input#demo-priority-high(type='radio', name='demo-priority')
+                  label(for='demo-priority-high') High
+                // Break
+                .col-6.col-12-small
+                  input#demo-copy(type='checkbox', name='demo-copy')
+                  label(for='demo-copy') Email me a copy
+                .col-6.col-12-small
+                  input#demo-human(type='checkbox', name='demo-human', checked='')
+                  label(for='demo-human') I am a human
+                // Break
+                .col-12
+                  textarea#demo-message(name='demo-message', placeholder='Enter your message', rows='6')
+                // Break
+                .col-12
+                  ul.actions
+                    li
+                      input(type='submit', value='Send Message')
+            hr
+            // Table
+            h3 Table
+            h4 Default
+            .table-wrapper
+              table
+                thead
+                  tr
+                    th Name
+                    th Description
+                    th Price
+                tbody
+                  tr
+                    td One
+                    td Ante turpis integer aliquet porttitor.
+                    td 29.99
+                  tr
+                    td Two
+                    td Vis ac commodo adipiscing arcu aliquet.
+                    td 19.99
+                  tr
+                    td Three
+                    td  Morbi faucibus arcu accumsan lorem.
+                    td 29.99
+                  tr
+                    td Four
+                    td Vitae integer tempus condimentum.
+                    td 19.99
+                  tr
+                    td Five
+                    td Ante turpis integer aliquet porttitor.
+                    td 29.99
+                tfoot
+                  tr
+                    td(colspan='2')
+                    td 100.00
+            h4 Alternate
+            .table-wrapper
+              table.alt
+                thead
+                  tr
+                    th Name
+                    th Description
+                    th Price
+                tbody
+                  tr
+                    td One
+                    td Ante turpis integer aliquet porttitor.
+                    td 29.99
+                  tr
+                    td Two
+                    td Vis ac commodo adipiscing arcu aliquet.
+                    td 19.99
+                  tr
+                    td Three
+                    td Morbi faucibus arcu accumsan lorem.
+                    td 29.99
+                  tr
+                    td Four
+                    td Vitae integer tempus condimentum.
+                    td 19.99
+                  tr
+                    td Five
+                    td Ante turpis integer aliquet porttitor.
+                    td 29.99
+                tfoot
+                  tr
+                    td(colspan='2')
+                    td 100.00
+            hr
+            // Preformatted Code
+            h3 Preformatted
+            pre
+              code.
+                i = 0;
+
+                while (!deck.isInOrder()) {
+                    print 'Iteration ' + i;
+                    deck.shuffle();
+                    i++;
+                }
+
+                print 'It took ' + i + ' iterations to sort the deck.';

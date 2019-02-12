@@ -1,0 +1,33 @@
+extends /_boilerplate.pug
+
+block page_meta
+  - var page_name = "Sponsors"
+  - var page_description = "Sponsorship of Glasgow Hyperloop."
+  - var page_keywords = "glasgow, hyperloop, competition, spacex, pod, scotland, sponsorship, packages"
+
+block page_body
+  // Banner
+  section#banner(background-image="styles/images/sponsors.png")
+    .content
+      header.major.special
+        h3 Sponsorship of
+        h1
+          | #[span.brandFontBold GLASGOW] HYPERLOOP
+        p
+          | Backing innovation and technology of the future.
+      ul.actions.special
+        li
+          a.button.primary.wide.scrolly(href='#sponsorship') WHAT WE OFFER
+  // Section
+  section#sponsorship.wrapper.style1
+    .inner
+      header.major.special
+        h3 Support the team?
+        ul.actions.special
+          li
+            a.button.primary.wide.scrolly(href="#footer") SPONSOR US
+        object(data='https://drive.google.com/file/d/1v-cd3e76AQw4PYdDLqYLl7l2b-K7gDUz/preview')
+          embed(src='https://drive.google.com/file/d/1v-cd3e76AQw4PYdDLqYLl7l2b-K7gDUz/preview')
+          p
+            | This browser does not support PDFs. Please download the PDF to view it: 
+            a(href='https://drive.google.com/file/d/1v-cd3e76AQw4PYdDLqYLl7l2b-K7gDUz/preview') View the PDF

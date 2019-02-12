@@ -1,0 +1,49 @@
+{
+  "name": "gla-hyperloop.com",
+  "version": "1.0.0",
+  "description": "The online address of Glasgow Hyperloop. #GlasgoingFast",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdhar/gla-hyperloop.com.git"
+  },
+  "keywords": [
+    "glasgow",
+    "hyperloop"
+  ],
+  "author": "Glasgow Hyperloop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdhar/gla-hyperloop.com/issues"
+  },
+  "homepage": "https://github.com/rdhar/gla-hyperloop.com#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.4.6",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.8",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "pug-lint": "^2.5.0",
+    "run-sequence": "^2.2.1",
+    "sass-lint": "^1.12.1"
+  },
+  "dependencies": {
+    "fg-loadcss": "^2.1.0",
+    "jstransformer-markdown-it": "^2.1.0",
+    "npm": "^6.7.0"
+  }
+}

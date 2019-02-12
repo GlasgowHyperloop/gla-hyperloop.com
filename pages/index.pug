@@ -1,0 +1,107 @@
+extends /_boilerplate.pug
+
+block page_meta
+  - var page_name = "Home"
+  - var page_description = "Welcome to Glasgow Hyperloop."
+  - var page_keywords = "glasgow, hyperloop, competition, spacex, pod, scotland, elon, musk"
+
+block page_scripts
+  script(src='https://platform.twitter.com/widgets.js', charset='utf-8')
+  script.
+    !function(e,t,n){var o,s=e.getElementsByTagName(t)[0];e.getElementById(n)||((o=e.createElement(t)).id=n,o.src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2",s.parentNode.insertBefore(o,s))}(document,"script","facebook-jssdk");
+
+block page_body
+  // Banner
+  section#banner(background-image="styles/images/home.png")
+    .content
+      header.major.special
+        h3 Welcome to
+        h1
+          | #[span.brandFontBold GLASGOW] HYPERLOOP
+        p
+          | Bringing the transportation of tomorrow to the world.
+      ul.actions.special
+        li
+          a.button.wide.scrolly(href='#first') LEARN MORE
+        li
+          a.button.primary.wide.scrolly(href='#sponsorship') GET INVOLVED
+  // Needed for Facebook plugin to hook into
+  #fb-root
+  // Section
+  section#first.wrapper.style1
+    .inner
+      .spotlights
+        section
+          .image.box
+            // https://publish.twitter.com/?query=https%3A%2F%2Ftwitter.com%2FGlaHyperloop&theme=light&widget=Timeline
+            a.twitter-timeline(data-height='600', data-theme='light', href='https://twitter.com/GlaHyperloop') Tweets by GlaHyperloop
+          .content
+            header.major
+              h3 About Hyperloop
+              | A futuristic transportation initially proposed by Elon Musk, CEO of Space X and Tesla. Hyperloop utilizes magnetic levitation in a near vacuum chamber to accelerate objects to high speeds. Within this vessel, passengers can be whisked through linked tunnels at up to 700 mph or 1,200 kmh.
+              br
+              | This would mean travelling the space of Glasgow to London within 45 minutes.
+              ul.actions.special.gtr-top.gtr-bottom
+                li
+                  a.button.primary.wide.scrolly(href='#vision') OUR VISION
+        section
+          .image.box
+            // https://developers.facebook.com/docs/plugins/page-plugin/#adaptive-width
+            .fb-page(data-href='https://www.facebook.com/GlasgowHyperloop', data-tabs='timeline', data-width='500', data-height='610', data-small-header='true', data-adapt-container-width='true', data-hide-cover='true', data-show-facepile='true')
+              blockquote#height_test.fb-xfbml-parse-ignore(cite='https://www.facebook.com/GlasgowHyperloop')
+                a(href='https://www.facebook.com/GlasgowHyperloop') Glasgow Hyperloop
+          .content
+            header.major
+              h3 The Competition
+              | Space X holds an annual Hyperloop Pod competition in California to accelerate the development of this technology and to encourage innovation. Students need to design and build a half-scale pod that can be self-propelled through a 1.2 km pressurised tube.
+              br
+              | This year’s competition focuses on maximum speed with successful deceleration.
+              ul.actions.special.gtr-top
+                li
+                  a.button.primary.wide.scrolly(href='/members.html#list') MEET THE TEAM
+  // Section
+  section#vision.wrapper.style2.alt
+    .inner
+      header.major.special
+        h2 Our Vision
+        .row.gtr-bottom
+          .col-6.col-12-small
+            | We are a team of passionate and motivated students working to advance the development of Hyperloop and means of accelerated travel. Our mission is to make Glasgow and the central belt of Scotland accessible to residents throughout the United Kingdom within record-breaking speeds.
+          .col-6.col-12-small
+            | Bolstering productivity and opening up areas of industrial activity like never before, Glasgow Hyperloop would prove itself essential to the advancement of residents of the central belt of Scotland and act as the foundation of advanced transportation for future generations.
+      .features
+        ul
+          li
+            span.icon.alt.major.fa-camera
+            h3 Design
+            p Build and test a half-scale pod and enter the 2019 Space X competition.
+          li
+            span.icon.alt.major.fa-bar-chart
+            h3 Develop
+            p Knowledge of practical aspects of engineering, employability skills, research, and analytical skills.
+        span.image
+          .iframe-container
+            iframe(src="https://www.youtube-nocookie.com/embed/2ziFw0uqfUw", height="100%", width="100%", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+        ul
+          li
+            span.icon.alt.major.fa-rss
+            h3 Promote
+            p STEM related topics via outreach based on this program.
+          li
+            span.icon.alt.major.fa-users
+            h3 Connect
+            p The central belt of Scotland accessible to residents throughout the United Kingdom in record-breaking speeds.
+  // Section
+  section#sponsorship.wrapper.style1
+    .inner
+      header.major.special
+        h2 Sponsorship
+        .row.gtr-bottom
+          .col-6.col-12-small
+            | Thank you for your interest in Glasgow Hyperloop. This student-run team aims to fast-track the UK's advancement in the transportation sector, while also building up the members' technical and non-technical skills to help them become more successful and employable.
+          .col-6.col-12-small
+            | Sponsorship support is vital to ensure our success, and your support will help in the professional development of future leaders and innovators, as well as the development of cutting-edge technologies.
+            | We are on an exciting journey and look forward to having you on board with us.
+        ul.actions.special
+          li
+            a.button.primary.wide.scrolly(href="/sponsors.html#sponsorship") SPONSOR US

@@ -1,0 +1,204 @@
+/* ---------------------- */
+/* Template Modifications */
+/* ---------------------- */
+
+/* Remove reference to overlay.png from background-image */
+header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
+  background-image: linear-gradient(90deg, rgba(49, 215, 155, 0), #4b76eb 90%);
+}
+
+/* Remove reference to overlay.png from background-image */
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+  background-image: linear-gradient(45deg, rgba(49, 215, 155, 0), #4b76eb 80%);
+}
+
+/* Remove reference to overlay.png from background-image */
+input[type="checkbox"]:checked + label:before,
+input[type="radio"]:checked + label:before {
+  background-image: linear-gradient(45deg, rgba(49, 215, 155, 0), #4b76eb 80%);
+}
+
+/* Replace reference to overlay.png from background-image to gradient */
+.wrapper.style2 {
+  background-image: linear-gradient(45deg, #31d79b, #4b76eb 80%) !important;
+}
+
+/* Remove reference to overlay.png from background-image */
+.wrapper.style2 input[type="submit"].primary,
+.wrapper.style2 input[type="reset"].primary,
+.wrapper.style2 input[type="button"].primary,
+.wrapper.style2 button.primary,
+.wrapper.style2 .button.primary {
+  background-image: linear-gradient(45deg, rgba(49, 215, 155, 0), #4b76eb 80%);
+}
+
+/* Remove reference to overlay.png from background-image */
+#banner input[type="submit"].primary,
+#banner input[type="reset"].primary,
+#banner input[type="button"].primary,
+#banner button.primary,
+#banner .button.primary {
+  background-image: linear-gradient(45deg, rgba(49, 215, 155, 0), #4b76eb 80%);
+}
+
+/* Remove reference to overlay.png from background-image */
+#header {
+  background-image: linear-gradient(90deg, rgba(49, 215, 155, 0), #4b76eb 90%);
+}
+
+/* Remove reference to overlay.png from background-image */
+#header.alt:before {
+  background-image: linear-gradient(90deg, rgba(49, 215, 155, 0), #4b76eb 90%);
+}
+
+/* Remove reference to overlay.png from background-image */
+#navPanel {
+  background-image: linear-gradient(45deg, rgba(49, 215, 155, 0), #4b76eb 80%);
+}
+
+/* Remove reference to banner.jpg from background-image */
+#banner {
+  background-image: linear-gradient(90deg, rgba(58, 58, 58, 0.6), rgba(58, 58, 58, 0.6));
+}
+
+/* Remove reference to banner.jpg from background-image */
+#footer {
+  background-image: linear-gradient(90deg, rgba(58, 58, 58, 0.6), rgba(58, 58, 58, 0.6));
+}
+
+
+/* ---------------- */
+/* Custom Additions */
+/* ---------------- */
+
+/* Century Gothic font family */
+@font-face {
+  font-family: 'CenturyGothic_Regular';
+  font-style: normal;
+  src: url('/styles/fonts/CenturyGothic_Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'CenturyGothic_Bold';
+  font-style: normal;
+  src: url('/styles/fonts/CenturyGothic_Bold.ttf') format('truetype');
+}
+
+.brandFont {
+  font-family: 'CenturyGothic_Regular';
+  letter-spacing: 0.3rem;
+}
+.brandFontBold {
+  font-family: 'CenturyGothic_Bold';
+  letter-spacing: 0.3rem;
+}
+
+#banner {
+  font-family: 'CenturyGothic_Regular';
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CenturyGothic_Regular';
+}
+
+/* Logo display at various viewport sizes */
+#logo {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-left: 2rem;
+}
+#logo + span.brandFontBold {
+  margin-left: 5rem;
+}
+
+@media only screen and (max-width: 736px) {
+  #logo {
+    display: none;
+  }
+  #logo + span.brandFontBold {
+    margin-left: 0;
+  }
+}
+/* Containers for specific elements */
+/* Social media feeds */
+.box {
+  border-radius: 0 !important;
+  box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Sponsorship PDF from Google Drive */
+#sponsorship object {
+  width: 100%;
+  height: 80vh;
+}
+
+/* YouTube video embed */
+.iframe-container {
+  border-radius: 2rem;
+  box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.25);
+  display: block;
+  width: 30rem;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+@media screen and (max-width: 1280px) {
+  .iframe-container {
+    margin: 0 auto;
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  .iframe-container {
+    width: 15rem;
+  }
+}
+.iframe-container iframe {
+  position: absolute;
+  border: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Utility classes to help specific element alignment */
+/* Additional gutters */
+.gtr-top {
+  margin-top: 2rem;
+}
+.gtr-bottom {
+  margin-bottom: 2rem;
+}
+
+/* Footer copyright message and link to page-top */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.align-left {
+  margin-left: 0;
+  text-align: left;
+}
+
+.hide {
+  display: none;
+}

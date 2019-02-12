@@ -1,0 +1,124 @@
+doctype html
+block page_meta
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content=page_description)
+    meta(name="keywords", content=page_keywords)
+    meta(name="author", content="Glasgow Hyperloop")
+    title #{page_name} · Glasgow Hyperloop
+
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans")
+    link(rel="stylesheet", href="/styles/template.css")
+    link(rel="stylesheet", href="/styles/custom.css")
+
+    // Favicon
+    link(rel="apple-touch-icon", sizes="180x180", href="/styles/images/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/styles/images/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/styles/images/favicon/favicon-16x16.png")
+    link(rel="manifest", href="/styles/images/favicon/site.webmanifest")
+    link(rel="mask-icon", href="/styles/images/favicon/safari-pinned-tab.svg", color="#5bbad5")
+    link(rel="shortcut icon", href="/styles/images/favicon/favicon.ico")
+    meta(name="msapplication-TileColor", content="#00aba9")
+    meta(name="msapplication-config", content="/styles/images/favicon/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+    meta(property='og:image:width', content='1293')
+    meta(property='og:image:height', content='677')
+    meta(property='og:title', content='Glasgow Hyperloop')
+    meta(property='og:description', content='We are a team of students passionate about advancing development of Hyperloop transportation. Our mission is to make travelling accessible throughout the UK at record-breaking speeds.')
+    meta(property='og:url', content='https://gla-hyperloop.com')
+    meta(property='og:image', content='https://gla-hyperloop.com/styles/images/favicon/og-image.jpg')
+
+  body
+    #wrapper
+      include /_navigation.pug
+      block page_body
+
+      section#footer.wrapper.style2
+        .inner
+          .row.gtr-200
+            // Social media links
+            .col-4.col-12-medium
+              h2.align-left Get updates
+              .gtr-bottom.align-left Follow us on social media for our latest updates.
+              ul.actions.fit
+                li
+                  a.button.fit.small.icon.fa-twitter(href='https://twitter.com/glahyperloop') Twitter
+                li
+                  a.button.fit.small.icon.fa-facebook(href='https://www.facebook.com/GlasgowHyperloop') Facebook
+              ul.actions.fit
+                li
+                  a.button.fit.small.icon.fa-instagram(href='https://www.instagram.com/glahyperloop') Instagram
+                li
+                  a.button.fit.small.icon.fa-linkedin(href='https://www.linkedin.com/company/glasgowhyperloop') LinkedIn
+            // Contact form
+            .col-8.col-12-medium
+              h2.align-left Get in touch
+              .gtr-bottom.align-left Feel free to drop us an email and we will get back to you as soon as possible.
+              form(name='contact', action='/confirmation.html', method='post', netlify-honeypot='verification', data-netlify='true', netlify)
+                .row.gtr-uniform
+                  .col-12
+                    textarea#message(name='message', placeholder='Talk to us…', rows='3', required)
+                  .col-6.col-12-xsmall
+                    input#name(type='text', name='name', placeholder='Name', required)
+                  .col-6.col-12-xsmall
+                    input#email(type='email', name='email', placeholder='Email', required)
+                  .col-12.hide
+                    input#url(type='text', name='url', placeholder='Page')
+                  .col-12.hide
+                    input#verification(type='text', name='verification', placeholder='Verification')
+                  .col-12
+                    ul.actions.special
+                      li
+                        div(data-netlify-recaptcha='true')
+                      li
+                        button(type='submit') SEND MESSAGE
+          hr 
+          p.clearfix
+            | #[span.float-left 2018–#[span#year YY] © Glasgow Hyperloop · All rights reserved · #[a(href='https://design.voya.ga', title="Designed with 💻, ☕ and 💗 by The Voyaga [design.voya.ga]") ∨·∧]]
+            | #[span.float-right #[a.scrolly(href="#banner") Back to top #[i.fa.fa-level-up]]]
+    script.
+      //- On DOM ready, perform the following functions
+      (function() {
+        //- All .alt class to #header for pages which have #banner element
+        if (document.getElementById('banner')) {
+          // Replace background image in the banner
+          document.getElementById('banner').style.backgroundImage = 'url("' + document.getElementById('banner').getAttributeNode('background-image').value + '"';
+          document.getElementById('header').classList.add('alt');
+        }
+
+        if (location.pathname == '/') {
+          //- Add .current and .active classes to the currently active home page
+          document.querySelector('nav li:first-child').classList.add('current','active');
+          //- Input current home page URL within the contact form for tracking analytics
+          document.getElementById('url').value = '/(home)';
+        } else {
+          try {
+            //- Add .current and .active classes to the currently active non-home page
+            document.querySelector("nav a[href^='" + location.pathname.split(".", 1) + "']").closest("li").classList.add("current","active");
+            //- Input current non-home page URL within the contact form for tracking analytics
+            document.getElementById('url').value = location.pathname;
+          } catch {}
+        }
+
+        //- Populate current year in the footer copyright
+        document.getElementById('year').innerHTML = new Date()
+          .getFullYear()
+          .toString()
+          .substr(2, 2);
+
+        //- Make reCaptcha a required input field for contact form submission
+        if (document.forms['contact']['g-recaptcha-response']) {
+          var recaptcha = document.forms['contact']['g-recaptcha-response'];
+          recaptcha.required = true;
+          recaptcha.oninvalid = function (e) {
+            alert("Please complete the reCaptcha to prove you're not a robot before sending your message. Thanks!");
+          }
+        }
+      })();
+    script(src="/scripts/compressed.js")
+
+    block page_scripts

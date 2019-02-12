@@ -1,0 +1,36 @@
+extends /_boilerplate.pug
+
+block page_meta
+  - var page_name = "Gallery"
+  - var page_description = "Media gallery of Glasgow Hyperloop."
+  - var page_keywords = "glasgow, hyperloop, competition, spacex, pod, scotland, media, gallery, social"
+
+block page_scripts
+  script.
+    window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'7nSJrur5eWKFtGgmQbOh'});Pixlee.addSimpleWidget({widgetId:'14598'});};
+  script(src='https://instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js', defer)
+
+block page_body
+  // Banner
+  section#banner(background-image="styles/images/gallery.png")
+    .content
+      header.major.special
+        h3 Media gallery of
+        h1
+          | #[span.brandFontBold GLASGOW] HYPERLOOP
+        p
+          | Catch a glimpse of us in action.
+      ul.actions.special
+        li
+          a.button.primary.wide.scrolly(href='#first') VIEW
+  // Section
+  section#first.wrapper.style1
+    .inner
+      .inner
+      header.major.special
+        h3 Follow us on social media?
+        ul.actions.special
+          li
+            a.button.primary.wide.scrolly(href="#footer") GET UPDATES
+      .box
+        #pixlee_container
