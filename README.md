@@ -21,7 +21,7 @@
 
 ## Build from source
 
-This is only if you're looking to get into the nitty gritty of the code powering the site. For most use-cases, simply edit the relevant `.pug` file within the `/pages` directory or create a `.md` file for new posts, as per these instructions.
+This is only if you're looking to get into the nitty gritty of the code powering the site. For most use-cases, simply edit the relevant `.pug` file within the `/pages` directory.
 
 1.  Install [Git](https://git-scm.com/downloads) along with your favorite Git client (recommendation: [GitKraken](https://www.gitkraken.com/invite/mDtz91pD)) and a capable text editor (recommendation: [VS Code](https://code.visualstudio.com/download))
     - Open your system's terminal (e.g., Command Prompt) and navigate to the directory where you want to store the repository (e.g., C:\\Documents\\Repos).
